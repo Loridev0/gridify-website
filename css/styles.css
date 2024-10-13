@@ -1,0 +1,123 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    padding: 10px 0;
+}
+
+
+.parallax-container {
+    padding: 6vw 2vw 0px 2vw;
+}
+
+.parallax {
+    background-image: url('../bilder/hero/gridify-grid.jpg');
+    height: 80vh;
+    border-radius: 20px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-clip: padding-box; 
+    overflow: hidden;/* Verhindert, dass das Bild in die abgerundeten Ecken schneidet bzw ein farb-bg sört */
+}
+
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.319); /* Overlay für bessere Lesbarkeit */
+}
+
+.parallax h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.glass-card {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    padding: 30px;
+    margin-top: -50px;
+}
+
+
+
+
+footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #387FF7;
+}
+
+/* Hover Effekt für Navigation Links */
+.navbar-nav .nav-link:hover {
+    color: #387FF7;
+}
+
+/* Hover-Effekt für Boxen */
+.shadow-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* SO, weil es für die gewünschte Größen keine klassen gibt  */
+@media (max-width: 768px) {
+    .parallax h1 {
+        font-size: 2.5rem;
+    }
+
+    .glass-card {
+        padding: 20px;
+    }
+} 
+
+
+.custom-margin-top {
+    margin-top: 200px !important;
+}
+
+
+
+footer {
+    margin-top: auto;
+}
+
+
+.divider {
+    height: 3px;
+    background-image: linear-gradient(to right, transparent, #007bff, transparent);
+    border: none;
+    opacity: 0.5;
+}
